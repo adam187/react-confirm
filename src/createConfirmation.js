@@ -29,6 +29,8 @@ const createConfirmation = (Component) => {
       }, 1000);
     }
 
+    promise.dispose = dispose;
+
     return promise.then((result) => {
       dispose();
       return result;
